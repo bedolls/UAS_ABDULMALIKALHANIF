@@ -41,11 +41,11 @@ $data = mysqli_fetch_array($edit)
             <form action="update.php" method="post">
                 <input type="hidden" name="id" value="<?=$data['id']?>">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"></label>
+                    <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
                     <input type="text" value="<?=$data['nama']?>" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">PENULIS</label>
+                    <label for="exampleInputEmail1" class="form-label">Jumlah Barang</label>
                     <input type="text" value="<?=$data['jumlah']?>" name="jumlah" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
@@ -54,7 +54,7 @@ $data = mysqli_fetch_array($edit)
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">File</label>
-                    <input type="file" value="<?=$data['gambar']?>" name="gambar" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="file"  accept='image*/' value="<?=$data['gambar']?>" name="gambar" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
